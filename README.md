@@ -1,11 +1,11 @@
 # Opencv
 Compile and Install OpenCV-4.1.0 on CENTOS 7 with Python-3.6
 
-tep 1
+Step 1
 Install OepnCV 4 dependencies
 OS and applications updates
 
-sudo yum upddate
+sudo yum update
 sudo yum upgrade
 
 Step 2
@@ -26,6 +26,7 @@ wget -O opencv_contrib-4.1.0.zip https://github.com/opencv/opencv_contrib/archiv
 unzip opencv_contrib-4.1.0.zip
 
 Step 5
+Use virtualenv (More information here: https://realpython.com/python-virtual-environments-a-primer/)
 workon cv4
 
 Step 6
@@ -34,12 +35,15 @@ pip install numpy
 
 Step 7
 Compile and install
-Target opencv folder is /usr/locaal
+Target opencv folder is /usr/local
 
 cd opencv-4.1.0
 mkdir build
 cd build
 cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=~/Documents/opencv_contrib-4.1.0/modules -D BUILD_EXAMPLES=ON ..
+
+Note: Check the cmake output carefully before running make, there should be reference to python3 and numpy. If you need to start over, just delete build folder and recreate it, run cmake again.
+
 make
 sudo make install
 
@@ -62,3 +66,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> cv2.__version__
 '4.1.0'
 >>> 
+
+Step 10
+Delete opencv-4.1.0.zip and opencv_contrib-4.1.0.zip.
+Delete opencv-4.1.0 folder.
