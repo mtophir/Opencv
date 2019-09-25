@@ -58,7 +58,8 @@ ln -s /usr/local/lib/python3.6/site-packages/cv2/python-3.6/cv2.so cv2.so
 
 Step 9 
 Run simple test
-python
+
+>python
 Python 3.6.7 (default, Dec  5 2018, 15:02:05) 
 [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)] on linux
 Type "help", "copyright", "credits" or "license" for more information.
