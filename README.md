@@ -5,13 +5,13 @@ Step 1
 Install OepnCV 4 dependencies
 OS and applications updates
 
-sudo yum update
+sudo yum update;
 sudo yum upgrade
 
 Step 2
 Install developer tools
-sudo yum groupinstall "Development Tools" -y
-sudo yum install cmake gcc gtk2-devel pkconfig -y
+sudo yum groupinstall "Development Tools" -y;
+sudo yum install cmake gcc gtk2-devel pkgconfig -y
 
 Step 3
 Download OpenCV 4.1.0
